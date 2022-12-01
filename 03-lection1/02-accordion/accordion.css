@@ -1,7 +1,7 @@
-/* Стилизация аккордеона */
-details[open] .marker {
-    transform: rotate(90deg);
-}
+/*!* Стилизация аккордеона *!*/
+/*details[open] .marker {*/
+/*    transform: rotate(90deg);*/
+/*}*/
 
 .accordion__item {
     /* p */
@@ -15,6 +15,20 @@ details[open] .marker {
 
     /* Gray 4 */
     color: #495057;
+}
+
+.accordion__summary {
+    /* p */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    /* identical to box height, or 150% */
+
+    /* Black */
+    color: #212429;
 }
 
 .accordion__item:last-child {
@@ -32,12 +46,35 @@ details[open] .marker {
     color: #212429;
 }
 
-.accordion__summary::-webkit-details-marker {  /* нестандартный псевдоэлемент Google Chrome */
-    display: none;
+.accordion__content {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 64px 49px 32px 32px;
+    /* or 150% */
+
+    /* Gray 4 */
+    color: #495057;
+}
+
+.accordion__details {
     background: #FFFFFF;
 
     /* Gray 3 */
     border: 1px solid #ACB5BD;
     border-radius: 8px;
     box-sizing: border-box;
+}
+
+.accordion__summary::-webkit-details-marker {  /* нестандартный псевдоэлемент Google Chrome */
+    display: none;
+}
+
+details > summary {
+    list-style: none;
+}
+details > summary::-webkit-details-marker {
+    display: none;
 }
