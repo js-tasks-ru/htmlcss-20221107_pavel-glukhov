@@ -1,1 +1,48 @@
-/* Стилизация аккордеона */
+.accordion__summary {
+    /* p */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 24px 539px 16px 32px;
+
+    /* Black */
+    color: #212429;
+}
+
+.accordion__content {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    padding: 0 49px 32px 32px;
+
+    /* Gray 4 */
+    color: #495057;
+}
+
+.accordion__details {
+    margin-bottom: 8px;
+    background: #FFFFFF;
+
+    /* Gray 3 */
+    border: 1px solid #ACB5BD;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.accordion__details:last-child {
+    margin-bottom: 0;
+}
+
+/* Убираем стандартный маркер Chrome */
+details summary::-webkit-details-marker {
+    display: none
+}
+/* Убираем стандартный маркер Firefox */
+details > summary {
+    list-style: none;
+}
