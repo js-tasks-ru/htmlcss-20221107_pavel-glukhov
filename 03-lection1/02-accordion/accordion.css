@@ -1,22 +1,3 @@
-/*!* Стилизация аккордеона *!*/
-/*details[open] .marker {*/
-/*    transform: rotate(90deg);*/
-/*}*/
-
-.accordion__item {
-    /* p */
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-
-    /* or 150% */
-
-    /* Gray 4 */
-    color: #495057;
-}
-
 .accordion__summary {
     /* p */
     font-family: 'Inter';
@@ -24,23 +5,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-
-    /* identical to box height, or 150% */
-
-    /* Black */
-    color: #212429;
-}
-
-.accordion__item:last-child {
-    margin-bottom: 0;
-    /* p */
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-
-    /* identical to box height, or 150% */
+    padding: 24px 539px 16px 32px;
 
     /* Black */
     color: #212429;
@@ -52,14 +17,15 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    padding: 64px 49px 32px 32px;
-    /* or 150% */
+    margin: 0;
+    padding: 0 49px 32px 32px;
 
     /* Gray 4 */
     color: #495057;
 }
 
 .accordion__details {
+    margin-bottom: 8px;
     background: #FFFFFF;
 
     /* Gray 3 */
@@ -68,13 +34,15 @@
     box-sizing: border-box;
 }
 
-.accordion__summary::-webkit-details-marker {  /* нестандартный псевдоэлемент Google Chrome */
-    display: none;
+.accordion__details:last-child {
+    margin-bottom: 0;
 }
 
+/* Убираем стандартный маркер Chrome */
+details summary::-webkit-details-marker {
+    display: none
+}
+/* Убираем стандартный маркер Firefox */
 details > summary {
     list-style: none;
-}
-details > summary::-webkit-details-marker {
-    display: none;
 }
